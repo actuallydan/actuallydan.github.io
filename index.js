@@ -88,12 +88,9 @@ cloud.innerHTML = technologies.map(t => `
 
 
 const cloudItems = document.querySelectorAll('.cloud-item');
-console.log(cloudItems)
 
 input.addEventListener('keyup', (event) => {
     const text = document.getElementById("technologies-input").value;
-    console.log(text)
-
 
     if (text.trim() === "") {
         cloudItems.forEach(c => {
