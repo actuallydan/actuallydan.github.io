@@ -1,15 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/dan_logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dan Kral portfolio</title>
-    <script type="module" crossorigin src="/assets/index-1345a14e.js"></script>
-    <link rel="stylesheet" href="/assets/index-f866aee3.css">
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div id="root"></div>
-    
+    <section class="contain-content">
+      <h1>Dan Kral</h1>
+      <h2>Full-Stack Developer</h2>
+    </section>
+
+    <section class="contain-content" id="hero-section">
+      <div class="hero-content">
+        <h1>TL;DR:</h1>
+        <p>
+          My name is
+          <a
+            class="bold-link"
+            href="https://github.com/actuallydan"
+            target="_blank"
+            rel="”noopener"
+            noreferrer”
+            >Dan</a
+          >, I'm a full-stack web and native app developer. I specialize in
+          React, React Native, and anything JavaScript with an emphasis on
+          bleeding edge technologies.
+        </p>
+        <p>
+          I've also worked with Java Servlets, Go, PHP, Python, and Ruby (please
+          don't make me use Ruby).
+        </p>
+        <p>
+          You'll find my exhaustive development experience
+          <a href="#resume" class="bold-link">below</a> but in short I have a
+          wealth of experince working on small dynamic teams on startups or
+          startup-like environments, where I've been brought in to bring order
+          to "all this React nonsense".
+        </p>
+      </div>
+    </section>
+
+    <section id="resume" class="contain-content">
+      <h1>Resume</h1>
+
+      <div class="resume-item">
+        <h2 class="resume-company">BluestoneLogic</h2>
+        <p class="resume-dates">August 2023 - Current</p>
+        <p>Systems Engineer Consultant</p>
+        <ul>
+          <li>
+            Development of React MVP for U.S. Department of Defense application
+          </li>
+          <li>Set up and maintained end-to-end test suites with Playwright</li>
+          <li>
+            Built APIs and asynchronous workflow jobs using Ruby in classified
+            platform
+          </li>
+          <li>
+            Collaborated with DoD other contract companies to build application
+            API specification
+          </li>
+        </ul>
+      </div>
+      <div class="resume-item">
+        <h2 class="resume-company">clean.io</h2>
+        <p class="resume-dates">March 2021 - January 2023</p>
+        <p>Senior Software Engineer</p>
+        <ul>
+          <li>
+            Led feature development for multiple React/Go apps, including client
+            analytics dashboard
+          </li>
+          <li>
+            Created component library to unify branding and UI/UX across
+            products and services
+          </li>
+          <li>
+            Co-led Automated Reporting feature with Sendgrid to reduce report
+            generation time by 99%
+          </li>
+          <li>
+            Transitioned codebases from JavaScript to TypeScript for
+            Node/Next.js API microservices
+          </li>
+          <li>
+            Automated deployment messaging to Slack with Python and Bitbucket
+            Pipelines
+          </li>
+        </ul>
+      </div>
+      <div class="resume-item">
+        <h2 class="resume-company">2U Education</h2>
+        <p class="resume-dates">March 2020 - February 2021</p>
+        <p>Full-Stack Teaching Assistant</p>
+        <ul>
+          <li>
+            Facilitated teaching of web technologies including HTML, MySQL, and
+            JavaScript
+          </li>
+          <li>
+            Evaluated homework and group projects on technical and design
+            quality
+          </li>
+        </ul>
+      </div>
+      <div class="resume-item">
+        <h2 class="resume-company">Mobiquity Inc</h2>
+        <p class="resume-dates">June 2019 - March 2020</p>
+        Associate Engineer
+        <ul>
+          <li>
+            Contributed to various client apps using React, React Native, Redux,
+            & TypeScript
+          </li>
+          <li>
+            Led Product Spotlight and App Upgrade features for Wawa iOS and
+            Android app
+          </li>
+          <li>
+            Worked on Otsuka Pharmaceutical’s Ingestion web app to track patient
+            medication usage
+          </li>
+          <li>
+            Integrated AWS Lambda-based GraphQL API during Wawa migration with
+            Apollo Client
+          </li>
+        </ul>
+      </div>
+      <div class="resume-item">
+        <h2 class="resume-company">Propark Mobility</h2>
+        <p class="resume-dates">May 2018 - June 2019</p>
+        <p>Software Engineer</p>
+        <ul>
+          <li>
+            Contributed to an Electron/React call center app to replace a dozen
+            separate systems
+          </li>
+          <li>
+            Implemented Machine Learning service with Brain.js to detect
+            unanswered escalation calls
+          </li>
+          <li>
+            Integrated Sentiment Analysis with GCP Speech-to-Text to analyze
+            customer interactions
+          </li>
+          <li>
+            Led project to automate ETL of financial reporting data from on-site
+            backup to BigQuery
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="technologies" class="contain-content">
+      <h1>Technology Keywords</h1>
+
+      <p>
+        I've worked with a lot of things, many of which aren't on my resume for
+        brevity, but here's as exhaustive a list as I could muster in no
+        particular order. If I've included it, it's something I can wrangle.
+      </p>
+      <div id="technologies-input-wrapper">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-search"
+        >
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.3-4.3" />
+        </svg>
+        <input
+          id="technologies-input"
+          placeholder="Search for a technology or service"
+        />
+      </div>
+      <div id="technologies-cloud">
+        <noscript
+          >what are you doing evaluating a web developer if you have JavaScript
+          turned off? Come on man.</noscript
+        >
+      </div>
+    </section>
+    <script src="index.js"></script>
   </body>
 </html>

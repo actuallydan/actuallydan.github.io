@@ -1,0 +1,217 @@
+:root {
+  --light: #f9f9f9;
+  --dark: #222222;
+  --light-transparent: #ffffffaa;
+  --dark-transparent: #000000aa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("fonts/GeistSans/GeistVariableVF.woff2"), format("woff2");
+}
+
+@font-face {
+  font-family: "GeistMono";
+  src: url("fonts/GeistMono/GeistMonoVariableVF.woff2"), format("woff2");
+}
+
+body {
+  font-family: "Geist";
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.inverse {
+  background: var(--dark);
+  color: var(--light);
+}
+
+.inverse-color {
+  color: var(--light);
+}
+
+.inverse-bg {
+  background: var(--dark);
+}
+
+input {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+input::placeholder {
+  color: #a9a9a9;
+  font-family: "GeistMono";
+}
+
+.contain-content {
+  padding: 2rem;
+  width: clamp(300px, 95%, 900px);
+  margin: auto;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+#hero-section {
+  background-image: url(images/bg-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0.5rem;
+}
+
+.hero-content {
+  padding: 1rem;
+  backdrop-filter: blur(6px);
+  background: var(--light-transparent);
+  border-radius: 0.5rem;
+  position: relative;
+  left: 0;
+  right: 0;
+  width: 110%;
+}
+
+.resume-item {
+  margin-bottom: 3rem;
+}
+.resume-company {
+  margin-bottom: 0;
+  letter-spacing: 0.012rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.resume-dates {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 0.2rem;
+}
+
+#technologies-input-wrapper {
+  border: none;
+  border-radius: 1rem;
+  background: var(--dark);
+  padding: 0.25rem 0.5rem;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition: all 0.2s;
+}
+
+#technologies-input-wrapper:focus-within {
+  outline: #cd5aff 2px solid;
+  translate: 0 -0.125rem;
+}
+
+#technologies-input-wrapper > svg {
+  stroke: var(--light);
+  padding: 0.125rem;
+}
+
+#technologies-input {
+  border: none;
+  background: var(--dark);
+  color: var(--light);
+  outline: none;
+  padding: 0.125rem 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+#technologies-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem 0;
+}
+
+.cloud-item {
+  transition: all 0.1s;
+  border-radius: 0.25rem;
+  background-color: #ffd100;
+  color: #222222;
+  padding: 0.125rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.hide-tag {
+  opacity: 0.2;
+}
+
+/* MISC */
+
+.bold-link {
+  font-weight: 700;
+  font-family: "Geist";
+  /* font-size: 1.1rem; */
+  /* letter-spacing: 0.012rem; */
+  text-decoration: none;
+  /* color: #cd5aff; */
+  background: #cd5aff;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.25rem;
+  color: #f9f9f9;
+}
+
+.bold-link:visited {
+  color: f9f9f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --light: #222222;
+    --dark: #f9f9f9;
+  }
+  body {
+    background: var(--light);
+    color: var(--dark);
+    outline: 5px dashed var(--light);
+  }
+  .inverse {
+    background-color: var(--dark);
+    color: var(--light);
+  }
+
+  .inverse-color {
+    color: var(--dark);
+  }
+
+  .inverse-bg {
+    background: var(--light);
+  }
+
+  input {
+    background: var(--light);
+    color: var(--dark);
+  }
+  .hero-content {
+    background: var(--dark-transparent);
+  }
+}
+
+@media (hover: hover) {
+  .cloud-item:hover:nth-of-type(1n) {
+    translate: 0 -0.25rem;
+  }
+  .cloud-item:hover:nth-of-type(2n) {
+    translate: 0 0.25rem;
+  }
+  .cloud-item:hover:nth-of-type(3n) {
+    translate: -0.25rem;
+  }
+  .cloud-item:hover:nth-of-type(4n) {
+    translate: 0.25rem;
+  }
+}
