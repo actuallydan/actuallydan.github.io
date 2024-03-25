@@ -9,6 +9,9 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
 @font-face {
   font-family: "Geist";
   src: url("fonts/GeistSans/GeistVariableVF.woff2"), format("woff2");
@@ -97,6 +100,9 @@ h2 {
   margin-top: 0.2rem;
 }
 
+#technologies {
+  margin-bottom: 6rem;
+}
 #technologies-input-wrapper {
   border: none;
   border-radius: 1rem;
@@ -150,15 +156,57 @@ h2 {
   opacity: 0.2;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem !important;
+  text-decoration: none;
+  background-color: var(--light);
+}
+
+.footer-label {
+  display: none;
+}
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  stroke: #000;
+  text-decoration: none;
+  width: 6rem;
+}
+footer a {
+  border-radius: 1rem;
+  /* padding: 0.5rem 0.5rem 0 0.5rem; */
+}
+
+.footer-item > svg {
+  stroke: #000;
+}
+
+.footer-label {
+  color: #000;
+  text-decoration: none !important;
+  font-size: 0.8rem;
+}
+
+p.footer-label:visited {
+  /* color: var(--dark); */
+  text-decoration: none;
+}
+
 /* MISC */
 
 .bold-link {
   font-weight: 700;
   font-family: "Geist";
-  /* font-size: 1.1rem; */
-  /* letter-spacing: 0.012rem; */
   text-decoration: none;
-  /* color: #cd5aff; */
   background: #cd5aff;
   border-radius: 0.25rem;
   padding: 0.125rem 0.25rem;
@@ -213,5 +261,62 @@ h2 {
   }
   .cloud-item:hover:nth-of-type(4n) {
     translate: 0.25rem;
+  }
+}
+
+@media (max-width: 1099px) {
+  footer {
+    padding: 2rem;
+    width: clamp(300px, 95%, 900px);
+    margin: auto;
+  }
+}
+@media (min-width: 1100px) {
+  footer {
+    position: fixed;
+    top: 4rem;
+    left: calc((100vw - 900px) / 2 - 6rem);
+    /* right: 0; */
+    width: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* background: var(--light); */
+    align-items: center;
+    padding: 0.25rem !important;
+    background: transparent;
+  }
+  footer > a {
+    width: 100%;
+  }
+
+  footer a {
+    margin-bottom: 2rem;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+  }
+
+  .footer-label {
+    display: initial;
+  }
+  .footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    stroke: #000;
+    color: #000;
+    padding: 0.25rem;
+  }
+
+  footer a:nth-of-type(1n) {
+    background-color: #ffd100;
+  }
+
+  footer a:nth-of-type(2n) {
+    background-color: #cd5aff;
+  }
+
+  footer a:nth-of-type(3n) {
+    background-color: #00ffff;
   }
 }
